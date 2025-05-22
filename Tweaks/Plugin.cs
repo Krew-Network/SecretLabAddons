@@ -22,7 +22,7 @@
         
         public override Version RequiredApiVersion { get; } = new Version(LabApiProperties.CompiledVersion);
         
-        public EventHandlers Events { get; } = new EventHandlers();
+        EventHandlers Events { get; } = new EventHandlers();
         
         public override void Enable()
         {
