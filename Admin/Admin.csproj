@@ -1,5 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" >
-    
+<Project Sdk="Microsoft.NET.Sdk" >
+
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -9,9 +9,9 @@
         <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-        <PackageId>Commons</PackageId>
+        <PackageId>Admin</PackageId>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <Reference Include="Assembly-CSharp" Publicize="true">
             <HintPath>$(SCPSL_REFERENCES)\Assembly-CSharp.dll</HintPath>
@@ -35,12 +35,12 @@
             <HintPath>$(SCPSL_REFERENCES)\CommandSystem.Core.dll</HintPath>
         </Reference>
     </ItemGroup>
-    
+
     <ItemGroup>
         <PackageReference Include="BepInEx.AssemblyPublicizer" Version="0.5.0-beta.1" />
         <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.5.0-beta.1">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Northwood.LabAPI" Version="1.0.2" />
     </ItemGroup>

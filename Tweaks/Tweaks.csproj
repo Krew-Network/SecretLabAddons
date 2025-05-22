@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net48</TargetFramework>
+        <TargetFramework>net4.8</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <Authors>Zombie</Authors>
         <Version>0.0.1</Version>
@@ -9,35 +9,44 @@
         <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-        <PackageId>Commons</PackageId>
+        <PackageId>Tweaks</PackageId>
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="Assembly-CSharp">
-            <HintPath>$(EXILED_REFERENCES)\Assembly-CSharp-Publicized.dll</HintPath>
+        <Reference Include="Assembly-CSharp" Publicize="true">
+            <HintPath>$(SCPSL_REFERENCES)\Assembly-CSharp.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp-firstpass">
-            <HintPath>$(EXILED_REFERENCES)\Assembly-CSharp-firstpass.dll</HintPath>
+            <HintPath>$(SCPSL_REFERENCES)\Assembly-CSharp-firstpass.dll</HintPath>
         </Reference>
         <Reference Include="Mirror">
-            <HintPath>$(EXILED_REFERENCES)\Mirror.dll</HintPath>
+            <HintPath>$(SCPSL_REFERENCES)\Mirror.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
-            <HintPath>$(EXILED_REFERENCES)\UnityEngine.CoreModule.dll</HintPath>
+            <HintPath>$(SCPSL_REFERENCES)\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.PhysicsModule">
-            <HintPath>$(EXILED_REFERENCES)\UnityEngine.PhysicsModule.dll</HintPath>
+            <HintPath>$(SCPSL_REFERENCES)\UnityEngine.PhysicsModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.Networking">
-            <HintPath>$(EXILED_REFERENCES)\UnityEngine.UnityWebRequestModule.dll</HintPath>
+            <HintPath>$(SCPSL_REFERENCES)\UnityEngine.UnityWebRequestModule.dll</HintPath>
         </Reference>
         <Reference Include="CommandSystem.Core">
-            <HintPath>$(EXILED_REFERENCES)\CommandSystem.Core.dll</HintPath>
+            <HintPath>$(SCPSL_REFERENCES)\CommandSystem.Core.dll</HintPath>
         </Reference>
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="BepInEx.AssemblyPublicizer" Version="0.5.0-beta.1" />
+        <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.5.0-beta.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Northwood.LabAPI" Version="1.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Commons\Commons.csproj" />
     </ItemGroup>
     
 </Project>
